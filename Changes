@@ -1,34 +1,18 @@
-----------------------------------------------------------------------
-r6775:  autrijus | 2004-08-01T05:13:22.891963Z
+[Changes for 0.07 - 2004-11-04]
 
-* This be 0.06.
+* Chia-Liang Kao reported that undecorated strings were stringified
+  into REF() forms, instead of their contents.
+
+[Changes for 0.06 - 2004-08-01]
+
 * Fix reblessing of constants triggered by "IO::Handle".
-----------------------------------------------------------------------
-r6218:  autrijus | 2004-07-22T20:56:46.210194Z
 
-* This be 0.05.
+[Changes for 0.05 - 2004-07-22]
+
 * Make sure we have Perl 5.6.0 for now.
 * Work around Test::Builder bug that makes it unable to deal with overloaded
   string constants in test names, by appending |'' to all such strings.
-----------------------------------------------------------------------
-r6181:  autrijus | 2004-07-19T21:20:26.116739Z
 
-* signature tests.
-----------------------------------------------------------------------
-r6180:  autrijus | 2004-07-19T21:16:55.091840Z
+[Changes for 0.04 - 2004-07-19]
 
-* This be 0.04, first CPAN release.
-* ~~"constant string" evaluation delayed until runtime.
-----------------------------------------------------------------------
-r6179:  autrijus | 2004-07-19T20:21:56.439169Z
-
-* At last, a working i18n.pm for all platforms.
-----------------------------------------------------------------------
-r4924:  autrijus | 2004-05-16T13:05:21.677461Z
-
-* changes.
-----------------------------------------------------------------------
-r3904:  autrijus | 2004-04-16T10:33:31.578658Z
-
-* Initial commit of the i18n.pm framework.
-----------------------------------------------------------------------
+* First CPAN release.

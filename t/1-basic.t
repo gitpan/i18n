@@ -2,7 +2,7 @@
 
 use strict;
 use FindBin;
-use Test::More tests => 13;
+use Test::More tests => 14;
 use lib "$FindBin::Bin/../lib";
 
 use i18n Path => "$FindBin::Bin/po";
@@ -11,6 +11,8 @@ use IO::Handle; # test the "constant reblessing" bug in 0.05
 i18n->loc_lang('zh-tw');
 
 my $test = "test";
+
+is("This is a $test", "This is a test", 'undecorated interpolation');
 
 ok(~~"This is a $test" eq '這是個test', 'basic usage'|'');
 

@@ -1,5 +1,5 @@
 package i18n;
-$i18n::VERSION = '0.06';
+$i18n::VERSION = '0.07';
 
 =head1 NAME
 
@@ -7,7 +7,7 @@ i18n - Perl Internationalization Pragma
 
 =head1 VERSION
 
-This document describes version 0.06 of i18n, released July 31, 2004.
+This document describes version 0.07 of i18n, released November 4, 2004.
 
 =head1 SYNOPSIS
 
@@ -219,8 +219,8 @@ sub _concat {
 
 sub _stringify {
     ($_[0][NEGATED])
-	? ~join('', map { (ref $_) ? "$$_" : "$_" } @{$_[0][DATA]})
-	:  join('', map { (ref $_) ? "$$_" : "$_" } @{$_[0][DATA]});
+	? ~join('', map { (ref $_) ? "$$$_" : "$_" } @{$_[0][DATA]})
+	:  join('', map { (ref $_) ? "$$$_" : "$_" } @{$_[0][DATA]});
 }
 
 sub _do_loc {
