@@ -1,5 +1,5 @@
 package i18n;
-$i18n::VERSION = '0.05';
+$i18n::VERSION = '0.06';
 
 =head1 NAME
 
@@ -7,7 +7,7 @@ i18n - Perl Internationalization Pragma
 
 =head1 VERSION
 
-This document describes version 0.05 of i18n, released July 22, 2004.
+This document describes version 0.06 of i18n, released July 31, 2004.
 
 =head1 SYNOPSIS
 
@@ -196,11 +196,11 @@ sub _concat {
     my ($seen, @data);
 
     foreach (@_) {
-	(push(@data, bless(\$_, "$class\::var")), next)
+	(push(@data, bless(\\$_, "$class\::var")), next)
 	    unless ref($_) and UNIVERSAL::isa($_, $class);
 	$seen++;
 
-	(push(@data, bless(\$_, "$class\::var")), next)
+	(push(@data, bless(\\$_, "$class\::var")), next)
 	    unless $_->[LINE] == $line and !$_->[NEGATED];
 	$seen++;
 
@@ -233,7 +233,7 @@ sub _do_loc {
     my @vars;
     my $format = join('', map {
 	UNIVERSAL::isa($_, "$class\::var")
-	    ? do { push(@vars, $$_); "[_".@vars."]" }
+	    ? do { push(@vars, $$$_); "[_".@vars."]" }
 	    : do { my $str = $_; $str =~ s/(?=[\[\]~])/~/g; $str };
     } @{$_[0][DATA]});
 
@@ -264,7 +264,7 @@ use overload (
     fallback => 1,
 );
 
-sub _stringify { ${$_[0]} }
+sub _stringify { ${${$_[0]}} }
 
 1;
 

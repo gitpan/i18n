@@ -6,9 +6,9 @@ use Test::More tests => 13;
 use lib "$FindBin::Bin/../lib";
 
 use i18n Path => "$FindBin::Bin/po";
+use IO::Handle; # test the "constant reblessing" bug in 0.05
 
-# needs to happen at a BEGIN block here
-BEGIN { i18n->loc_lang('zh-tw') };
+i18n->loc_lang('zh-tw');
 
 my $test = "test";
 

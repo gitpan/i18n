@@ -4,7 +4,7 @@ use inc::Module::Install;
 
 name('i18n');
 author('Autrijus Tang <autrijus@autrijus.org>');
-abstract('Perl Internationlization Pragma');
+abstract('Perl Internationalization Pragma');
 license('perl');
 version_from('lib/i18n.pm');
 

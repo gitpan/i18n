@@ -1,6 +1,6 @@
 name: i18n
-version: 0.05
-abstract: Perl Internationlization Pragma
+version: 0.06
+abstract: Perl Internationalization Pragma
 author: Autrijus Tang <autrijus@autrijus.org>
 license: perl
 distribution_type: module
