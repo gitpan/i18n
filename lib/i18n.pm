@@ -1,9 +1,13 @@
 package i18n;
-$i18n::VERSION = '0.04';
+$i18n::VERSION = '0.05';
 
 =head1 NAME
 
 i18n - Perl Internationalization Pragma
+
+=head1 VERSION
+
+This document describes version 0.05 of i18n, released July 22, 2004.
 
 =head1 SYNOPSIS
 
@@ -21,7 +25,7 @@ In your module:
 
 =head1 DESCRIPTION
 
-Internationalization (abbreviated 'i18n') is the process of designing an
+Internationalization (abbreviated C<i18n>) is the process of designing an
 application so that it can be adapted to various languages and regions.
 The most basic task is to let your program know which strings are meant
 for human consumption and which strings are intended for the computer.

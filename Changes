@@ -1,4 +1,15 @@
 ----------------------------------------------------------------------
+r6218:  autrijus | 2004-07-22T20:56:46.210194Z
+
+* This be 0.05.
+* Make sure we have Perl 5.6.0 for now.
+* Work around Test::Builder bug that makes it unable to deal with overloaded
+  string constants in test names, by appending |'' to all such strings.
+----------------------------------------------------------------------
+r6181:  autrijus | 2004-07-19T21:20:26.116739Z
+
+* signature tests.
+----------------------------------------------------------------------
 r6180:  autrijus | 2004-07-19T21:16:55.091840Z
 
 * This be 0.04, first CPAN release.
