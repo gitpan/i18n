@@ -1,0 +1,14 @@
+name: i18n
+version: 0.04
+abstract: Perl Internationization Pragma
+author: Autrijus Tang <autrijus@autrijus.org>
+license: perl
+distribution_type: module
+requires:
+  Locale::Maketext: 0
+  Locale::Maketext::Lexicon: 0
+  Locale::Maketext::Simple: 0
+no_index:
+  directory:
+    - inc
+generated_by: Module::Install version 0.35
