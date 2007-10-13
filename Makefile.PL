@@ -1,18 +1,17 @@
 #!/usr/bin/perl
 
+use strict;
 use inc::Module::Install;
 
-name('i18n');
-author('Autrijus Tang <autrijus@autrijus.org>');
-abstract('Perl Internationalization Pragma');
-license('perl');
-version_from('lib/i18n.pm');
+name     'i18n';
+author   'Audrey Tang <cpan@audreyt.org>';
+all_from 'lib/i18n.pm';
 
-requires(
-    perl => 5.006,
-    'Locale::Maketext'		=> 0,
-    'Locale::Maketext::Lexicon'	=> 0,
-    'Locale::Maketext::Simple'	=> 0,
-);
+requires 'Locale::Maketext';
+requires 'Locale::Maketext::Lexicon';
+requires 'Locale::Maketext::Simple';
 
-&WriteAll( sign => 1 );
+include_deps 'Test::More';
+auto_provides;
+
+sign; WriteAll;
